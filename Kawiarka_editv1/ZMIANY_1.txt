@@ -1,0 +1,40 @@
+23.09.2018
+
+
+--- MODUŁ LICZNIK ---
+---------------------
+
+- Dodanie obsługi grzania wody oraz wsypywania kawy // linia 48 oraz 53
+- zdefiniowanie obliczania dla każdej z kaw
+
+--- defines.v ---
+-----------------
+
+- poprawienie wartości binarnych poszczególnych definicji
+
+--- MODUŁ WYBORU (do sprawdzenia) ---
+-------------------------------------
+
+- Napisanie modułu wyboru 
+- Definicja kaw , ustawienie komend odpowiadająch za wybór + reset
+
+--- main.v ---
+--------------
+
+- Podłączenie modułu wyboru // linia 51-59
+
+--- old_main.v ---
+------------------
+
+- zrobienie panelu przycisków(komunikuje się z modułem wyboru,pominięcie funkcji resetowanie dla każdej opcji(do wglądu)) // linia 88 - 153
+
+
+
+
+!!! DO ZROBIENIA OLD.MAIN -- Generalnie od lini 154 w dół ( always @(licz_in) ) !!!
+
+
+
+
+
+
