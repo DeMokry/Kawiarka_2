@@ -1,0 +1,36 @@
+24.09.2018 -- VIVADO 2018.2
+
+------------------
+--!! ZROBIONE !!--
+------------------
+
+- projekt wkońcu nie jest "czerwony" // usunięcie wszystkich dotychczasowych errorów
+
+- działający moduł main/old.main , co za tym idzie - wszystkie moduły są połączone ze sobą / komunikują się
+
+- napisany testbench co prawda brzydki ( nie uwzględniając wyświetlacza )
+
+- działa nawet już elaborated design czyli schemat( oczywiście wyświetlacz jest tam aktualnie "duchem" co widać po konsoli - 
+( WARNING: [Synth 8-3331] design mdk_main has unconnected port stan_mm[4] oraz WARNING: [Synth 8-3331] design choose_module has unconnected port stan_mm[3])
+- krótko mówiąc wyświetlacz nie jest jeszcze konkretnie podłączony
+
+- zmiana defincji modułu głównego w pliku defines.v - chodziło o to że z jakiegoś powodu rejestr nie "przetrawiał" tych defincji jak WORKING,GRINDING,WATER_BOIL itp. 
+bo były zapisane na 4bitach,stworzyłem więc defincje(te polskie) zapisane na 3bitach - 3'b000
+
+
+--------------------
+-!! DO ZROBIENIA !!-
+--------------------
+
+- generalnie przejrzenie wszystkiego na świeżo (stwierdzenie czy wszystko ma ręce i nogi)
+- przerobienie wyświetlacza dla naszych potrzeb
+- kreatywne rozwinięcie modułu wyboru(aktualnie jest KAWA1->R_OK etc.)
+- napisanie solidniejszego testbencha
+
+
+--------------
+-- Kosmetyka--
+--------------
+
+- edycja komentarzy
+- usunięcie niepotrzebnych komentarzy

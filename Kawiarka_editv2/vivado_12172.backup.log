@@ -1,0 +1,125 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Sep 24 23:40:47 2018
+# Process ID: 12172
+# Current directory: C:/Users/furen/Desktop/Kawiarka_editv1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11400 C:\Users\furen\Desktop\Kawiarka_editv1\project_1.xpr
+# Log file: C:/Users/furen/Desktop/Kawiarka_editv1/vivado.log
+# Journal file: C:/Users/furen/Desktop/Kawiarka_editv1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/furen/Desktop/Kawiarka_editv1/project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/xilinx/Vivado/2018.2/data/ip'.
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7z020clg484-3
+Top: main
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 885.625 ; gain = 103.625
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'main' [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/main.v:24]
+	Parameter KAWA1 bound to: 3'b001 
+	Parameter KAWA2 bound to: 3'b010 
+	Parameter KAWA3 bound to: 3'b011 
+	Parameter tick_every bound to: 20 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'sprawnosc' [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/ready_test.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'sprawnosc' (1#1) [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/ready_test.v:3]
+INFO: [Synth 8-6157] synthesizing module 'divider' [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/dzielnik.v:23]
+	Parameter div bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'divider' (2#1) [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/dzielnik.v:23]
+INFO: [Synth 8-6157] synthesizing module 'choose_module' [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/choose_module.v:24]
+	Parameter KAWA1 bound to: 3'b001 
+	Parameter KAWA2 bound to: 3'b010 
+	Parameter KAWA3 bound to: 3'b011 
+WARNING: [Synth 8-6090] variable 'n_stan' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/choose_module.v:46]
+WARNING: [Synth 8-6090] variable 'n_stan' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/choose_module.v:51]
+WARNING: [Synth 8-6090] variable 'n_stan' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/choose_module.v:56]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/choose_module.v:43]
+WARNING: [Synth 8-567] referenced signal 'stan' should be on the sensitivity list [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/choose_module.v:40]
+WARNING: [Synth 8-567] referenced signal 'cmd_out' should be on the sensitivity list [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/choose_module.v:40]
+WARNING: [Synth 8-3848] Net stan in module/entity choose_module does not have driver. [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/choose_module.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'choose_module' (3#1) [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/choose_module.v:24]
+INFO: [Synth 8-6157] synthesizing module 'counter' [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/licznik.v:6]
+	Parameter tick_every bound to: 20 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/licznik.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'counter' (4#1) [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/licznik.v:6]
+INFO: [Synth 8-6157] synthesizing module 'wyswietlacz_4x7' [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/wyswietlacz.v:27]
+INFO: [Synth 8-226] default block is never used [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/wyswietlacz.v:47]
+INFO: [Synth 8-226] default block is never used [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/wyswietlacz.v:47]
+INFO: [Synth 8-226] default block is never used [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/wyswietlacz.v:47]
+INFO: [Synth 8-226] default block is never used [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/wyswietlacz.v:47]
+INFO: [Synth 8-226] default block is never used [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/wyswietlacz.v:47]
+INFO: [Synth 8-6155] done synthesizing module 'wyswietlacz_4x7' (5#1) [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/wyswietlacz.v:27]
+INFO: [Synth 8-6157] synthesizing module 'mdk_main' [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/old_main.v:27]
+	Parameter KAWA_1 bound to: 3'b001 
+	Parameter KAWA_2 bound to: 3'b010 
+	Parameter KAWA_3 bound to: 3'b011 
+	Parameter tick_every bound to: 20 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/old_main.v:106]
+WARNING: [Synth 8-567] referenced signal 'cmd_in' should be on the sensitivity list [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/old_main.v:89]
+WARNING: [Synth 8-567] referenced signal 'sprawnosc_in' should be on the sensitivity list [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/old_main.v:89]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/old_main.v:164]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/old_main.v:186]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/old_main.v:159]
+WARNING: [Synth 8-567] referenced signal 'stan_main' should be on the sensitivity list [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/old_main.v:155]
+WARNING: [Synth 8-567] referenced signal 'cmd_out' should be on the sensitivity list [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/old_main.v:155]
+WARNING: [Synth 8-6090] variable 'stan_n' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/old_main.v:215]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/old_main.v:210]
+WARNING: [Synth 8-567] referenced signal 'stan_main' should be on the sensitivity list [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/old_main.v:207]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/old_main.v:228]
+INFO: [Synth 8-6155] done synthesizing module 'mdk_main' (6#1) [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/old_main.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'main' (7#1) [C:/Users/furen/Desktop/Kawiarka_editv1/project_1.srcs/sources_1/new/main.v:24]
+WARNING: [Synth 8-3331] design mdk_main has unconnected port stan_mm[4]
+WARNING: [Synth 8-3331] design mdk_main has unconnected port stan_mm[3]
+WARNING: [Synth 8-3331] design mdk_main has unconnected port stan_mm[2]
+WARNING: [Synth 8-3331] design mdk_main has unconnected port stan_mm[1]
+WARNING: [Synth 8-3331] design mdk_main has unconnected port stan_mm[0]
+WARNING: [Synth 8-3331] design choose_module has unconnected port stan_mm[3]
+WARNING: [Synth 8-3331] design choose_module has unconnected port stan_mm[2]
+WARNING: [Synth 8-3331] design choose_module has unconnected port stan_mm[1]
+WARNING: [Synth 8-3331] design choose_module has unconnected port stan_mm[0]
+WARNING: [Synth 8-3331] design choose_module has unconnected port clk
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 941.254 ; gain = 159.254
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 941.254 ; gain = 159.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 941.254 ; gain = 159.254
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:14 . Memory (MB): peak = 1300.848 ; gain = 518.848
+31 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 1300.848 ; gain = 518.848
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 24 23:43:01 2018...
