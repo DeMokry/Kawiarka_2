@@ -14,8 +14,7 @@
 ( WARNING: [Synth 8-3331] design mdk_main has unconnected port stan_mm[4] oraz WARNING: [Synth 8-3331] design choose_module has unconnected port stan_mm[3])
 - krótko mówiąc wyświetlacz nie jest jeszcze konkretnie podłączony
 
-- zmiana defincji modułu głównego w pliku defines.v - chodziło o to że z jakiegoś powodu rejestr nie "przetrawiał" tych defincji jak WORKING,GRINDING,WATER_BOIL itp. 
-bo były zapisane na 4bitach,stworzyłem więc defincje(te polskie) zapisane na 3bitach - 3'b000
+- zmiana defincji modułu głównego w pliku defines.v - zrobienie polskich definicji -- !!! na 3 bitach !!!!
 
 
 --------------------
