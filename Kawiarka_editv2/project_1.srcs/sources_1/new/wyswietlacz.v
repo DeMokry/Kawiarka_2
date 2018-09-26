@@ -1,26 +1,11 @@
 `include "defines.v"
 
-//////////////////////////////////////////////////////////////////////////////////
-// Company: WSIZ Copernicus
-// Engineer: Darek B.
-// 
-// Create Date: 18.05.2017 17:42:28
-// Design Name: 
-// Module Name: wyswietlacz_4x7seg
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
+
 /*
     MULTIPLEXOWANY, CZTEROSEGMENTOWY WYŒWIETLACZ 7SEG Z KROPK¥
     
 */  
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+
 //////////////////////////////////////////////////////////////////////////////////
 
 
@@ -31,13 +16,13 @@ module wyswietlacz_4x7(
     input wire [4:0] L_3,           // liczba segement 3 (6 bit = kropka)
     input wire [4:0] L_4,           // liczba segement 4 (6 bit = kropka)
     output reg [3:0] segment_out,   // wskaŸnik wyœwietlanej liczby (0-wyœwietlany, 1-zgaszony)
-    output reg seg_um,              // góra, œrodek
-    output reg seg_ul,              // góra, lewo
-    output reg seg_ur,              // góra, prawo
-    output reg seg_mm,              // œrodek, œrodek
-    output reg seg_dl,              // dó³, lewo
-    output reg seg_dr,              // dó³, prawo
-    output reg seg_dm,              // dól, œrodek
+    output reg seg_um,              // góra, œrodek 1
+    output reg seg_ul,              // góra, lewo 2
+    output reg seg_ur,              // góra, prawo 3
+    output reg seg_mm,              // œrodek, œrodek 4
+    output reg seg_dl,              // dó³, lewo 5
+    output reg seg_dr,              // dó³, prawo 6
+    output reg seg_dm,              // dól, œrodek 7
     output reg seg_dot              // kropka
     );
     
@@ -56,12 +41,10 @@ module wyswietlacz_4x7(
                 4'b0111: liczbaNAsygnaly = ~{liczba[4:4],7'b1010010};  // 7
                 4'b1000: liczbaNAsygnaly = ~{liczba[4:4],7'b1111111};  // 8
                 4'b1001: liczbaNAsygnaly = ~{liczba[4:4],7'b1111011};  // 9
-                
+                                                      
                 4'b1010: liczbaNAsygnaly = ~{liczba[4:4],7'b0001000};  // -
-                4'b1011: liczbaNAsygnaly = ~{liczba[4:4],7'b1000000};  // um
-                4'b1100: liczbaNAsygnaly = ~{liczba[4:4],7'b0010000};  // ur
-                4'b1101: liczbaNAsygnaly = ~{liczba[4:4],7'b0001000};  // mm
-                4'b1110: liczbaNAsygnaly = ~{liczba[4:4],7'b0100000};  // ul
+                4'b1011: liczbaNAsygnaly = ~{liczba[4:4],7'b1111110};  // a 
+                4'b1100: liczbaNAsygnaly = ~{liczba[4:4],7'b1101101};  // e
                 4'b1111: liczbaNAsygnaly = ~{liczba[4:4],7'b0000000};  // nic
             endcase
          end

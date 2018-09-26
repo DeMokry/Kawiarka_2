@@ -16,7 +16,7 @@ module counter(clk, count_in, count_out, count_secs);
     // 1 s = 1 000 000 000 ns
     // 1 s = 1 000 000 us
     parameter tick_every = 20;       // parametr co ile nastêpuje tick zegara (w us)
-    integer mc = 1000000/tick_every; // mno¿nik dla czasu w sekundach (czêstotliwoœæ w Hz)
+    integer mc = 1000000/tick_every; // mno¿nik dla czasu w sekundach (czêstotliwoœæ w  50 Hz)
     
     // wysy³amy pozosta³y czas do modu³u top (w sekundach)
     assign count_secs = count_to_0/mc;

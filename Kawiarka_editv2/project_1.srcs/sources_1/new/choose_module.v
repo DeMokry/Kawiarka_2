@@ -43,17 +43,18 @@ module choose_module(
                 case (cmd_in)
                     `CMD_K1:
                         begin
-                            n_stan <= KAWA1;             // przycisk kawa 1(stan)
+                            n_stan <= KAWA1;             // przycisk kawa 1(stan) e
+                           
                             cmd_out <= `R_OK;
                         end
                     `CMD_K2:
                         begin
-                            n_stan <= KAWA2;             // przycisk kawa 2(stan)
+                            n_stan <= KAWA2;             // przycisk kawa 2(stan) 2e
                             cmd_out <= `R_OK;
                         end
                     `CMD_K3:
                         begin
-                            n_stan <= KAWA3;             // przycisk kawa 3(stan)
+                            n_stan <= KAWA3;             // przycisk kawa 3(stan) a
                             cmd_out <= `R_OK;
                         end
                    

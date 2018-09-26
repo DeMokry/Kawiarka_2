@@ -1,10 +1,11 @@
 `ifndef MY_DEFINES_SV
 `define MY_DEFINES_SV
-    `timescale 1us / 1ns
+`timescale 1us / 1ns
     
    
      // stany choose module - wyboru
-          `define NIC   2'b00     // bezczynnosc 
+         // `define NIC   2'b00     // bezczynnosc 
+         
           `define mielenie    3'b001    // mielenie kawy  
           `define podgrzewanie    3'b010      // podgrzewanie wody
           `define sypanie    3'b011      // sypanie kawy    
@@ -13,15 +14,15 @@
     
     // Modu³ wyboru kawy
     
-    `define k0  3'b000        // brak wyboru
-    `define k1  3'b001        // kawa 1 esspresso
-    `define k2  3'b010        // kawa 2 dubleesspresso
-    `define k3  3'b011        // kawa 3 americana
+    `define k0  5'b00000        // brak wyboru
+    `define k1  5'b00001        // kawa 1 esspresso
+    `define k2  5'b00010        // kawa 2 dubleesspresso
+    `define k3  5'b00011        // kawa 3 americana
     
    // MODU£ G£ÓWNY STANY
-       /* 
-        `define IDLE       = 4'b0000       // stan bezczynnosci
-        `define WORKING    = 4'b0001        // stan pracy
+      
+        `define NIC      = 4'b0000       // stan bezczynnosci
+        `define CHOOSE     = 4'b0001        // stan pracy
         `define ERROR      = 4'b0010       // stan b³edu - zwracam 
         `define START      = 4'b0011       // stan przygotowania do pracy
         `define GRINDING   = 4'b0100       // mielenie
@@ -30,7 +31,7 @@
         `define WATER_POUR = 4'b0111       // zalewanie gor¹ca wod¹
         `define POBIERAM  =  4'b1000
         `define CLEANING   = 4'b1001       // czyszczenie 
-   */
+  
     
     // Sterowanie urz¹dzeniami
         `define CMD_ZERO                3'b000
@@ -111,10 +112,9 @@
     `define W_8             4'b1000 // 8
     `define W_9             4'b1001 // 9
                     
-    `define W_MM            4'b1010 // mm
-    `define W_UM            4'b1011 // um
-    `define W_UR            4'b1100 // ur
-    `define W_UL            4'b1101 // ul
-    `define W_DM            4'b1110 // dm
+    `define W_MM            4'b1010 // midle 
+    `define W_A             4'b1011 // a
+    `define W_E             4'b1100 // e
+    
     `define W_NULL          4'b1111 // nic
 `endif

@@ -4,24 +4,6 @@
 
 
 //////////////////////////////////////////////////////////////////////////////////
-// Company: WSIZ Copernicus
-// Engineer: Rafa³ B., Szymon S., Darek B.
-// 
-// Create Date: 25.04.2017 18:46:49
-// Design Name:  
-// Module Name: mdk
-// Project Name: Maszyna do kawy 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
 
 module mdk_main(
@@ -230,51 +212,22 @@ module mdk_main(
                         begin // NIC SIE NIE DZIEJE - PUSTY WYSWIETLACZ
                             {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b0,`W_NULL,1'b0,`W_NULL,1'b0,`W_NULL};
                         end
-                        /*
-                    `POBIERAM:   // pobieram op³atê
+                        
+                    `CHOOSE:   // wybór kawy - wyœwietlanie jaka kawka
                         begin
                             case(stan_mm)
-                                `NIC:   {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b1,`W_0,1'b0,`W_0,1'b0,`W_0};
-                                `m050:  {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b1,`W_0,1'b0,`W_5,1'b0,`W_0};
-                                `m100:  {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b1,`W_1,1'b0,`W_0,1'b0,`W_0};
-                                `m150:  {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b1,`W_1,1'b0,`W_5,1'b0,`W_0};
-                                `m200:  {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b1,`W_2,1'b0,`W_0,1'b0,`W_0};
-                                `m250:  {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b1,`W_2,1'b0,`W_5,1'b0,`W_0};
-                                `m300:  {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b1,`W_3,1'b0,`W_0,1'b0,`W_0};
-                                `m350:  {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b1,`W_3,1'b0,`W_5,1'b0,`W_0};
-                                `m400:  {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b1,`W_4,1'b0,`W_0,1'b0,`W_0};
-                                `m450:  {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b1,`W_4,1'b0,`W_5,1'b0,`W_0};
-                                `m500:  {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b1,`W_5,1'b0,`W_0,1'b0,`W_0};
-                                `m550:  {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b1,`W_5,1'b0,`W_5,1'b0,`W_0};
-                                `m600:  {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b1,`W_6,1'b0,`W_0,1'b0,`W_0};
-                                `m650:  {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b1,`W_6,1'b0,`W_5,1'b0,`W_0};
-                                `m700:  {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b1,`W_7,1'b0,`W_0,1'b0,`W_0};
-                                `m750:  {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b1,`W_7,1'b0,`W_5,1'b0,`W_0};
-                                `m800:  {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b1,`W_8,1'b0,`W_0,1'b0,`W_0};
-                                `m850:  {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b1,`W_8,1'b0,`W_5,1'b0,`W_0};
-                                `m900:  {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b1,`W_9,1'b0,`W_0,1'b0,`W_0};
-                                `m950:  {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b1,`W_9,1'b0,`W_5,1'b0,`W_0};
-                                `m1000: {L_1,L_2,L_3,L_4} <= {1'b0,`W_1,1'b1,`W_0,1'b0,`W_0,1'b0,`W_0};
-                            endcase
-                        end
-                    `ZWRACAM:
-                        begin
-                            case (L_1) // WIRUJ¥CE OKRÊGI NA WYŒWIETLACZU - ZWROT PIENIÊDZY
-                                default: {L_1,L_2,L_3,L_4} <= {1'b0,`W_UM,1'b0,`W_MM,1'b0,`W_UM,1'b0,`W_MM}; 
-                                `W_UM: {L_1,L_2,L_3,L_4} <= {1'b0,`W_UL,1'b0,`W_UR,1'b0,`W_UL,1'b0,`W_UR};
-                                `W_UL: {L_1,L_2,L_3,L_4} <= {1'b0,`W_MM,1'b0,`W_UM,1'b0,`W_MM,1'b0,`W_UM};
-                                `W_MM: {L_1,L_2,L_3,L_4} <= {1'b0,`W_UR,1'b0,`W_UL,1'b0,`W_UR,1'b0,`W_UL};
+                                `NIC: {L_1,L_2,L_3,L_4} <= {1'b0,`W_0,1'b1,`W_0,1'b0,`W_0,1'b0,`W_0};
+                                `k1:  {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b1,`W_NULL,1'b0,`W_NULL,1'b0,`W_E};
+                                `k2:  {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b1,`W_NULL,1'b0,`W_2,1'b0,`W_E};
+                                `k3:  {L_1,L_2,L_3,L_4} <= {1'b0,`W_NULL,1'b1,`W_NULL,1'b0,`W_NULL,1'b0,`W_A};
+                               
                             endcase
                         end
                     `NAPELNIJ_PRZEWODY:     // wype³nianie przewodów wod¹
                         begin
                             {L_1,L_2,L_3,L_4} <= {1'b0,`W_MM,1'b0,`W_MM,licznikNaLiczby(count_secs)};
-                        end
-                    `PODSTAW_KUBEK:         // podtsawienie kubka
-                        begin
-                            {L_1,L_2,L_3,L_4} <= {1'b0,`W_1,1'b0,`W_MM,licznikNaLiczby(count_secs)};
-                        end
-                        */
+                        end                   
+                     
                     `mielenie:            // mielenie kawy
                         begin
                            {L_1,L_2,L_3,L_4} <= {1'b0,`W_2,1'b0,`W_MM,licznikNaLiczby(count_secs)};
